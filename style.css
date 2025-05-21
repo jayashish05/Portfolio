@@ -50,10 +50,10 @@ a:hover{
 
 .basic-details{
     display: flex;
-    height: 75vh;
+    height: 65vh;
     width: 80%;
     justify-content: space-evenly;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .left{
@@ -122,4 +122,92 @@ a:hover{
     cursor: pointer;
     transform: translateY(-2px);
     color: #FFFFFF;
+}
+
+.about-me{
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-heading{
+    border-bottom: 3px solid #3B82F6;
+    margin-bottom: 60px;
+    color: #111827;
+}
+
+.about-summary{
+    margin: 0 200px 0 200px;
+    color: #111827;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+
+.project-name{
+    color: #111827;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #3B82F6;
+    margin-bottom: 40px;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.project-card{
+    width: 400px;
+    height: 450px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    padding: 0 10px 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-skill{
+    display: flex;
+    margin: 10px 0;
+}
+
+.project-skill-box{
+    background-color: #3B82F6;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    color: #FFFFFF;
+}
+
+.project-heading{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.project-summary{
+    color: #6B7280;
+}
+
+.project-list{
+    list-style-type: none;
+    color: #6B7280;
+}
+
+.project-card button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.project-card:hover{
+    transform: scale(1.05)
 }
