@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,10 +18,10 @@
         <div class="nav">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -41,7 +42,7 @@
                 <img src="" alt="My Image">
             </div>
         </div>
-        <div class="about-me">
+        <div class="about-me" id="about">
             <h1 class="about-heading">About Me</h1>
             <p class="about-summary">
                 Hi, I'm a web developer with a passion for building responsive and user-friendly websites. 
@@ -51,11 +52,12 @@
                 I enjoy turning ideas into real, working products that people can use and enjoy.
             </p>
         </div>
-        <div class="projects">
+        <div class="projects" id="projects">
             <h1 class="project-name">My Projects</h1>
             <div class="project-container">
                 <div class="project-card">
                     <h2 class="project-heading">Weather App</h2>
+                    <hr>
                     <p class="project-summary">
                         This Weather App allows users to search for real-time weather 
                         information by entering a city name. It fetches live weather 
@@ -74,6 +76,7 @@
                 </div>
                 <div class="project-card">
                     <h2 class="project-heading">Spanish Verb Conjugator</h2>
+                    <hr>
                     <p class="project-summary">
                         This project is a simple web-based Spanish Verb Conjugator that 
                         allows users to input a verb and see its conjugation in the present 
@@ -90,6 +93,7 @@
                 </div>
                 <div class="project-card">
                     <h2 class="project-heading">Amazon Clone</h2>
+                    <hr>
                     <p class="project-summary">
                         A responsive Amazon-inspired e-commerce website clone 
                         built using HTML, CSS, and JavaScript. This project replicates 
@@ -106,6 +110,83 @@
                 </div>
             </div>
         </div>
+        <div class="skills" id="skills">
+            <h1 class="skills-heading">My Skills</h1>
+            <div class="skills-container">
+                <div class="skills-card">
+                    <h1 class="skills-name">Frontend</h1>
+                    <hr>
+                    <div class="skills-list-box">
+                        <ul class="skills-list">
+                            <li><i class="fa-brands fa-html5"></i>HTML</li>
+                            <li><i class="fa-brands fa-css"></i>CSS</li>
+                            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+                            <li><i class="fa-brands fa-bootstrap"></i>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <h1 class="skills-name">Backend</h1>
+                    <hr>
+                    <div class="skills-list-box">
+                        <ul class="skills-list">
+                            <li><i class="fa-brands fa-python"></i>Python</li>
+                            <li><i class="fa-brands fa-node"></i>Node JS</li>
+                            <li><i class="fa-solid fa-database"></i>Firebase</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-card">
+                    <h1 class="skills-name">Other Tools</h1>
+                    <hr>
+                    <div class="skills-list-box">
+                        <ul class="skills-list">
+                            <li><i class="fa-brands fa-git"></i>Git</li>
+                            <li><i class="fa-brands fa-figma"></i>Figma</li>
+                            <li><i class="fa-brands fa-windows"></i>Windows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <h1 class="contact-heading">Contact Me</h1>
+            <div class="social">
+                <div class="email">
+                    <i class="fa-solid fa-envelope fa-2x"></i>
+                    <h3 class="email-name">Email</h3>
+                    <a href="mailto:jayashishmuppur@gmail.com">Click Here to Mail</a>
+                </div>
+                <div class="github">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                    <h3 class="github-name">Github</h3>
+                    <a href="https://github.com/jayashish05">Click Here To View</a>
+                </div>
+                <div class="linkedin">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                    <h3 class="linkedin-name">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/jayashish-muppur/">Click Here To View</a>
+                </div>
+            </div>
+            <div class="contact-container">
+                <form action="#" class="form">
+                    <h2 class="form-name">Get in Touch</h2>
+                    <div class="form-name">
+                        <input type="text" name="name" id="name" placeholder="Your Name"><br>
+                    </div>
+                    <div class="form-email">
+                        <input type="email" name="email" id="email" placeholder="Your Email"><br>
+                    </div>
+                    <div class="form-message">
+                        <textarea name="message" id="message" placeholder="Your Message"></textarea><br>
+                    </div>
+                    <button type="submit" class="get-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </main>
+    <footer>
+        <p class="footer-text">Portfolio | Made by Jayashish M</p>
+    </footer>
 </body>
 </html>
