@@ -15,6 +15,11 @@
         <h1 class="nav-logo">
             PORTFOLIO
         </h1>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="nav">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
@@ -34,12 +39,12 @@
                 <h2 class="passion">A Passionate Web Developer</h2>
                 <p class="summary">I create beautiful and functional websites/applications that solve real-world problems and delight users.</p>
                 <div class="btns">
-                    <button class="get-btn">GET IN TOUCH</button>
-                    <button class="resume-btn">MY RESUME</button>
+                    <button class="get-btn" onclick="contact()">GET IN TOUCH</button>
+                    <button class="resume-btn" onclick="resume()">MY RESUME</button>
                 </div>
             </div>
             <div class="right">
-                <img src="" alt="My Image">
+                <div class="pro-img"><img src="profile-img.jpeg" alt="My Image" class="profile-img"></div>
             </div>
         </div>
         <div class="about-me" id="about">
@@ -72,7 +77,7 @@
                         <p class="project-skill-box">CSS</p>
                         <p class="project-skill-box">JavaScript</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p1()">View Project</button>
                 </div>
                 <div class="project-card">
                     <h2 class="project-heading">Spanish Verb Conjugator</h2>
@@ -89,7 +94,7 @@
                         <p class="project-skill-box">CSS</p>
                         <p class="project-skill-box">JavaScript</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p2()">View Project</button>
                 </div>
                 <div class="project-card">
                     <h2 class="project-heading">Amazon Clone</h2>
@@ -106,7 +111,7 @@
                         <p class="project-skill-box">HTML</p>
                         <p class="project-skill-box">CSS</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p3()">View Project</button>
                 </div>
             </div>
         </div>
@@ -160,12 +165,12 @@
                 <div class="github">
                     <i class="fa-brands fa-github fa-2x"></i>
                     <h3 class="github-name">Github</h3>
-                    <a href="https://github.com/jayashish05">Click Here To View</a>
+                    <a href="https://github.com/jayashish05" target="_blank">Click Here To View</a>
                 </div>
                 <div class="linkedin">
                     <i class="fa-brands fa-linkedin fa-2x"></i>
                     <h3 class="linkedin-name">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/jayashish-muppur/">Click Here To View</a>
+                    <a href="https://www.linkedin.com/in/jayashish-muppur/" target="_blank">Click Here To View</a>
                 </div>
             </div>
             <div class="contact-container">
@@ -180,7 +185,7 @@
                     <div class="form-message">
                         <textarea name="message" id="message" placeholder="Your Message"></textarea><br>
                     </div>
-                    <button type="submit" class="get-btn">Send Message</button>
+                    <button type="submit" class="get-btn" onclick="validate()">Send Message</button>
                 </form>
             </div>
         </div>
@@ -188,5 +193,6 @@
     <footer>
         <p class="footer-text">Portfolio | Made by Jayashish M</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
