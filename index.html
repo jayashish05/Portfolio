@@ -15,6 +15,11 @@
         <h1 class="nav-logo">
             PORTFOLIO
         </h1>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="nav">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
@@ -34,12 +39,12 @@
                 <h2 class="passion">A Passionate Web Developer</h2>
                 <p class="summary">I create beautiful and functional websites/applications that solve real-world problems and delight users.</p>
                 <div class="btns">
-                    <button class="get-btn">GET IN TOUCH</button>
-                    <button class="resume-btn">MY RESUME</button>
+                    <button class="get-btn" onclick="contact()">GET IN TOUCH</button>
+                    <button class="resume-btn" onclick="resume()">MY RESUME</button>
                 </div>
             </div>
             <div class="right">
-                <img src="" alt="My Image">
+                <div class="pro-img"><img src="profile-img.jpeg" alt="My Image" class="profile-img"></div>
             </div>
         </div>
         <div class="about-me" id="about">
@@ -56,23 +61,22 @@
             <h1 class="project-name">My Projects</h1>
             <div class="project-container">
                 <div class="project-card">
-                    <h2 class="project-heading">Weather App</h2>
+                    <h2 class="project-heading">Blood Line</h2>
                     <hr>
                     <p class="project-summary">
-                        This Weather App allows users to search for real-time weather 
-                        information by entering a city name. It fetches live weather 
-                        data from the OpenWeatherMap API and displays key weather details including:
-                        <ul class="project-list">
-                            <li>🌡️ Temperature (in Celsius)</li>
-                            <li>🌥️ Weather Condition Icon (Clear, Clouds, Rain, Snow)</li>
-                        </ul>
+                        Blood Line is a next-generation blood donation 
+                        web app designed to efficiently connect blood donors and recipients. 
+                        Built with JavaScript and Firebase, the platform ensures seamless real-time 
+                        donor matching, emergency request notifications.
                     </p>
                     <div class="project-skill">
-                        <p class="project-skill-box">HTML</p>
+                        <p class="project-skill-box">React.JS</p>
                         <p class="project-skill-box">CSS</p>
                         <p class="project-skill-box">JavaScript</p>
+                        <p class="project-skill-box">API Integration</p>
+                        <p class="project-skill-box">Firebase</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p1()">View Project</button>
                 </div>
                 <div class="project-card">
                     <h2 class="project-heading">Spanish Verb Conjugator</h2>
@@ -89,24 +93,27 @@
                         <p class="project-skill-box">CSS</p>
                         <p class="project-skill-box">JavaScript</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p2()">View Project</button>
                 </div>
                 <div class="project-card">
-                    <h2 class="project-heading">Amazon Clone</h2>
+                    <h2 class="project-heading">Code Collab</h2>
                     <hr>
                     <p class="project-summary">
-                        A responsive Amazon-inspired e-commerce website clone 
-                        built using HTML, CSS, and JavaScript. This project replicates 
-                        the core layout and design of the Amazon homepage, showcasing 
-                        front-end development skills and UI/UX practices.
-                        Amazon-style responsive homepage layout
-                        Header with logo, search bar, and navigation links
+                        CodeCollab is an interactive, real-time 
+                        collaborative coding platform that enables multiple 
+                        users to code together simultaneously, chat, and share 
+                        ideas in a seamless environment.
+                        Real-time Collaboration: Code together with teammates in real-time
                     </p>
                     <div class="project-skill">
-                        <p class="project-skill-box">HTML</p>
+                        <p class="project-skill-box">EJS</p>
                         <p class="project-skill-box">CSS</p>
+                        <p class="project-skill-box">Node.JS</p>
+                        <p class="project-skill-box">MongoDB</p>
+                        <p class="project-skill-box">Express.JS</p>
+                        <p class="project-skill-box">Socket.io</p>
                     </div>
-                    <button class="resume-btn">View Project</button>
+                    <button class="resume-btn" onclick="p3()">View Project</button>
                 </div>
             </div>
         </div>
@@ -130,9 +137,11 @@
                     <hr>
                     <div class="skills-list-box">
                         <ul class="skills-list">
-                            <li><i class="fa-brands fa-python"></i>Python</li>
+                            <li><i class="fa-brands fa-square-js"></i>EJS</li>
+                            <li><i class="fa-brands fa-npm"></i>NPM</li>
+                            <li><i class="fa-solid fa-server"></i>Express JS</li>
                             <li><i class="fa-brands fa-node"></i>Node JS</li>
-                            <li><i class="fa-solid fa-database"></i>Firebase</li>
+                            <li><i class="fa-solid fa-database"></i>MongoDB</li>
                         </ul>
                     </div>
                 </div>
@@ -142,6 +151,7 @@
                     <div class="skills-list-box">
                         <ul class="skills-list">
                             <li><i class="fa-brands fa-git"></i>Git</li>
+                            <li><i class="fa-brands fa-npm"></i>NPM</li>
                             <li><i class="fa-brands fa-figma"></i>Figma</li>
                             <li><i class="fa-brands fa-windows"></i>Windows</li>
                         </ul>
@@ -160,12 +170,12 @@
                 <div class="github">
                     <i class="fa-brands fa-github fa-2x"></i>
                     <h3 class="github-name">Github</h3>
-                    <a href="https://github.com/jayashish05">Click Here To View</a>
+                    <a href="https://github.com/jayashish05" target="_blank">Click Here To View</a>
                 </div>
                 <div class="linkedin">
                     <i class="fa-brands fa-linkedin fa-2x"></i>
                     <h3 class="linkedin-name">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/jayashish-muppur/">Click Here To View</a>
+                    <a href="https://www.linkedin.com/in/jayashish-muppur/" target="_blank">Click Here To View</a>
                 </div>
             </div>
             <div class="contact-container">
@@ -180,7 +190,7 @@
                     <div class="form-message">
                         <textarea name="message" id="message" placeholder="Your Message"></textarea><br>
                     </div>
-                    <button type="submit" class="get-btn">Send Message</button>
+                    <button type="submit" class="get-btn" onclick="validate()">Send Message</button>
                 </form>
             </div>
         </div>
@@ -188,5 +198,6 @@
     <footer>
         <p class="footer-text">Portfolio | Made by Jayashish M</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

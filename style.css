@@ -8,16 +8,20 @@
 
 body{
     background-color: #F9FAFB;
+    overflow-x: hidden;
 }
 
 header{
-    height: 12vh;
+    height: auto;
+    min-height: 12vh;
     width: 100%;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    padding: 0 20px;
+    position: relative;
 }
 
 .nav-logo{
@@ -50,14 +54,16 @@ a:hover{
 
 .basic-details{
     display: flex;
-    height: 65vh;
-    width: 80%;
+    height: auto;
+    min-height: 70vh;
+    width: 95%;
     justify-content: space-evenly;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .left{
     width: 400px;
+    margin-top: 50px;
 }
 
 .name{
@@ -120,11 +126,31 @@ a:hover{
     color: #FFFFFF;
 }
 
+.pro-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 .about-me{
     display: flex;
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
 }
 
 .about-heading{
@@ -142,7 +168,8 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 700px;
+    height: auto;
+    padding: 40px 0;
 }
 
 .project-name{
@@ -157,22 +184,26 @@ a:hover{
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .project-card{
     width: 400px;
-    height: 450px;
+    height: auto;
+    min-height: 450px;
     background-color: #FFFFFF;
     box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.05);
     border-radius: 10px;
     border: 1px solid rgb(229, 231, 235);
     padding: 0 10px 0 20px;
     transition: transform 0.3s ease;
+    margin: 15px;
 }
 
 .project-skill{
     display: flex;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .project-skill-box{
@@ -194,7 +225,6 @@ a:hover{
 .project-summary{
     color: #6B7280;
     margin-top: 20px;
-
 }
 
 .project-list{
@@ -213,10 +243,12 @@ a:hover{
 
 .skills{
     width: 100%;
-    height: 550px;
+    height: auto;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
 }
 
 .skills-heading{
@@ -229,10 +261,12 @@ a:hover{
     width: 90%;
     justify-content: space-around;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .skills-card{
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     width: 300px;
     background-color: #FFFFFF;
     padding: 20px;
@@ -240,6 +274,7 @@ a:hover{
     box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     border: 1px solid rgb(229, 231, 235);
+    margin: 15px;
 }
 
 .skills-list{
@@ -274,10 +309,23 @@ a:hover{
 
 .contact{
     width: 100%;
-    height: 800px;
+    height: auto;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
+}
+
+.form {
+    margin-top: 50px;
+    width: 650px;
+    height: 450px;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
 }
 
 .contact-heading{
@@ -288,33 +336,432 @@ a:hover{
 }
 
 #name,#email{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 40px;
     padding-left: 10px;
     font-size: large;
     border-radius: 5px;
     border: 1px solid lightgray;
-
+    box-sizing: border-box;
 }
 
 #message{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: 100px;
     margin-top: 20px;
     padding-left: 10px;
     padding-top: 10px;
     font-size: large;
     border-radius: 5px;
-    border: 1px solid lightgray;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #111827;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.nav.active .nav-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.nav.active .nav-list li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav.active .nav-list li a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        padding: 10px;
+    }
+    
+    header {
+        position: relative;
+        padding: 15px 20px;
+        height: auto;
+        min-height: 12vh;
+    }
+
+    .nav.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav.active .nav-list {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav.active .nav-list li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .basic-details {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 50px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .left {
+        width: 100%;
+        max-width: 500px;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .name {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-btn,
+    .resume-btn {
+        width: 80%;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .pro-img {
+        margin-top: 20px;
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-summary {
+        margin: 0 50px;
+        text-align: center;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 80%;
+        margin-bottom: 30px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header {
+        height: auto; 
+        flex-direction: row;
+        justify-content: space-between; 
+        padding: 15px 20px; 
+        position: relative; 
+    }
+
+    .nav-logo {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .hamburger-menu {
+        margin-right: 0;
+        right: 50px;
+    }
+
+    .hamburger-menu .bar {
+        width: 22px;
+        height: 2px;
+        margin: 4px 0;
+    }
+
+    .nav-list li {
+        margin: 0 10px;
+    }
+
+    .name {
+        justify-content: center;
+    }
+
+    .passion, .summary {
+        padding: 0 15px;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-summary {
+        margin: 0 20px;
+    }
+
+    .project-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .social {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .email, .github, .linkedin {
+        margin: 15px 20px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px 30px;
+        box-sizing: border-box;
+    }
+
+    #name, #email, #message {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+
+    .hamburger-menu {
+        right: 30px;
+        padding: 8px;
+    }
+
+    .hamburger-menu .bar {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .nav.active {
+        top: 100%;
+    }
+
+    .nav.active .nav-list li {
+        margin: 10px 0;
+    }
+
+    .left h1 {
+        font-size: 1.8rem;
+    }
+
+    .name-1, .name-2 {
+        font-size: 1.8rem;
+        display: inline-block;
+    }
+
+    .passion {
+        font-size: 1.2rem;
+    }
+
+    .summary {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .get-btn,
+    .resume-btn {
+        width: 100%;
+        max-width: 250px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-heading, .project-name, .skills-heading, .contact-heading {
+        font-size: 1.5rem;
+    }
+
+    .about-summary {
+        font-size: 0.9rem;
+        margin: 0 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+    .project-heading {
+        font-size: 1.3rem;
+    }
+
+    .project-summary {
+        font-size: 0.85rem;
+    }
+
+    .project-skill-box {
+        padding: 6px;
+        font-size: 0.75rem;
+        margin: 3px;
+    }
+
+    .skills-card {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        min-height: 280px;
+        padding: 15px;
+    }
+
+    .skills-name {
+        font-size: 1.3rem;
+    }
+
+    .skills-list li {
+        font-size: 0.9rem;
+    }
+
+    .contact-heading {
+        margin-bottom: 30px;
+    }
+
+    .social {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    .email, .github, .linkedin {
+        margin-bottom: 25px;
+        height: auto;
+    }
+
+    .form {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #name, #email {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    #message {
+        height: 80px;
+        font-size: 0.9rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
 }
 
 .form{
-    width: auto;
-    height: 340px;
+    width: 650px;
+    height: auto;
+    min-height: 340px;
     background-color: #FFFFFF;
     padding: 30px 60px 60px 60px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }
 
 .form-name{
@@ -346,7 +793,8 @@ a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 140px;
+    height: auto;
+    min-height: 140px;
 }
 
 .email i,.github i,.linkedin i{
