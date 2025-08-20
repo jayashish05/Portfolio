@@ -3,7 +3,7 @@ function contact(){
 }
 
 function resume(){
-    window.open("https://drive.google.com/file/d/1brg2gnCGJKpqhd5o8xVkFvdXGNPzvqHV/view?usp=drivesdk","_blank");
+    window.open("https://drive.google.com/file/d/1zlj1ZS42qcwvVSngeECCRkrHm88zmizX/view?usp=sharing","_blank");
 }
 
 function p1(){
